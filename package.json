@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "~1.18.2",
     "bootstrap": "^3.3.7",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.10",
+    "morgan": "~1.9.0",
     "react": "^16.3.2",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.3.2",
@@ -14,14 +21,8 @@
     "react-scripts": "1.1.4",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^3.2.5",
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "styled-components": "^3.2.5"
   },
   "scripts": {
     "start": "node server.js & react-scripts start",
@@ -36,5 +37,6 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "fetch-mock": "^6.3.0",
     "react-test-renderer": "^16.3.1"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

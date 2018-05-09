@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 const publicFolder = path.join(__dirname, 'build')
 app.use(express.static(publicFolder))
 
-app.get('/api', function(req, res) {
+app.get('/api/survey_results', function(req, res) {
     res.json(surveyList)
 })
 
