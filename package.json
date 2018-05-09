@@ -25,9 +25,11 @@
   },
   "scripts": {
     "start": "node server.js & react-scripts start",
+    "prebuild": "npm run format",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.js\""
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
