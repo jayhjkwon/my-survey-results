@@ -14,6 +14,8 @@ export class Index extends Component {
   render() {
     return (
       <Grid>
+        {this.props.isLoading && <h2>Loading...</h2>}
+        
         <TitleContainer>
           <Title>Survey Results</Title>
         </TitleContainer>
