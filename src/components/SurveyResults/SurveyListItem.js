@@ -73,10 +73,10 @@ const Circle = styled.div`
     padding-left: 2px;
   }
 
-  @media(max-width: 1200px) {
-      width: 90px;
-      height: 90px;
-      font-size: 2rem;
+  @media (max-width: 1200px) {
+    width: 90px;
+    height: 90px;
+    font-size: 2rem;
   }
 `
 

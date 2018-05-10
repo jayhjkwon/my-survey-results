@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { actionCreators } from '../../store/survey'
 import SurveyListItem from './SurveyListItem'
+import PageTitle from '../shared/styled/PageTitle'
 
 export class Index extends Component {
   componentDidMount() {
@@ -15,10 +16,10 @@ export class Index extends Component {
     return (
       <Grid>
         {this.props.isLoading && <h2>Loading...</h2>}
-        
-        <TitleContainer>
-          <Title>Survey Results</Title>
-        </TitleContainer>
+
+        <PageTitle>
+          <span>Survey Results</span>
+        </PageTitle>
         <Row>
           <Col sm={6} smOffset={3}>
             {this.props.surveyResults &&
@@ -31,15 +32,6 @@ export class Index extends Component {
     )
   }
 }
-
-const TitleContainer = styled.h1`
-  margin: 3rem 0;
-`
-
-const Title = styled.span`
-  border-bottom: solid 1px #ddd;
-  padding: 0 1rem 0.8rem 1rem;
-`
 
 export default connect(
   state => state.surveyState,

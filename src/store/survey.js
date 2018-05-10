@@ -25,11 +25,11 @@ export const actionCreators = {
     }
   },
 
-  fetchSurveyResultDetails: () => async (dispatch, getState) => {
+  fetchSurveyResultDetails: id => async (dispatch, getState) => {
     dispatch({ type: REQUEST_SURVEY_RESULT_DETAIL })
 
     try {
-      const response = await surveyService.fetchSurveyResultList()
+      const response = await surveyService.fetchSurveyResultDetails(id)
       return dispatch({ type: RECEIVE_SURVEY_RESULT_DETAIL, ...response })
     } catch (error) {
       return dispatch({ type: RECEIVE_SURVEY_RESULT_DETAIL, error })

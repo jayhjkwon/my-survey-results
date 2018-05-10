@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export default () => {
   return (
     <HeaderContainer>
-      <Title>MySurveyResults.com.au</Title>
+      <StyledLink to="/">
+        <Title>MySurveyResults.com.au</Title>
+      </StyledLink>
     </HeaderContainer>
   )
 }
@@ -25,4 +28,13 @@ const Title = styled.h2`
   margin: 0;
   padding: 0.9rem;
   letter-spacing: 2px;
+`
+
+const StyledLink = styled(Link)`
+  color: #333;
+
+  :hover,
+  :focus {
+    text-decoration: none;
+  }
 `
