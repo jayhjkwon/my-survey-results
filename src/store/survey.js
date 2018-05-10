@@ -57,19 +57,22 @@ export const reducer = (state = initialState, action) => {
     }
 
     case RECEIVE_SURVEY_RESULT_DETAIL: {
+      const detail = { ...action.survey_result_detail }
 
-        const detail = {...action.survey_result_detail}
+      _.each(detail.themes, theme =>
+        _.each(theme.questions, question => {
+          const total = _.sumBy(question.survey_responses, resp =>
+            Number(resp.response_content)
+          )
+          const responseCount = _.filter(
+            question.survey_responses,
+            resp => resp.response_content
+          ).length
+          const avg = total / responseCount
+          question.average = avg
+        })
+      )
 
-        _.each(detail.themes, theme => _.each(theme.questions, question => {
-            const total = _.sumBy(question.survey_responses, resp => Number(resp.response_content))
-            const responseCount = _.filter(
-                question.survey_responses,
-                resp => resp.response_content
-            ).length
-            const avg = total / responseCount
-            question.average = avg
-        }))
-      
       return {
         ...state,
         isLoading: false,

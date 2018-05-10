@@ -1,5 +1,6 @@
 {
   "survey_result_detail": {
+    "id": 1,
     "name": "Simple Survey",
     "url": "/survey_results/1",
     "participant_count": 6,

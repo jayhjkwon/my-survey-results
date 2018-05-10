@@ -1,9 +1,12 @@
 ﻿import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
+import * as survey from './survey'
 
 export default function configureStore(history, initialState) {
-  const reducers = {}
+  const reducers = {
+    surveyState: survey.reducer
+  }
 
   const middleware = [thunk, routerMiddleware(history)]
 

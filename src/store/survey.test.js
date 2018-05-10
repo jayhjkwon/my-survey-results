@@ -198,9 +198,12 @@ describe('reducer', () => {
       }
     })
 
-    console.log('surveyResultDetail', state.surveyResultDetail)
     expect(state.isLoading).toEqual(false)
-    expect(state.surveyResultDetail.themes[0].questions[0].average).toEqual(23/5)
-    expect(state.surveyResultDetail.themes[0].questions[1].average).toEqual(25/5)
+    expect(state.surveyResultDetail.themes[0].questions[0].average).toEqual(
+      23 / 5
+    )
+    expect(state.surveyResultDetail.themes[0].questions[1].average).toEqual(
+      25 / 5
+    )
   })
 })

@@ -16,6 +16,7 @@ const FooterContainer = styled.div`
   background: rgba(249, 249, 249, 0.7);
   border-top: solid 1px #eee;
   padding: 0.9rem 0;
+  margin-top: 100px;
 `
 
 const FooterText = styled.p`
