@@ -58,7 +58,7 @@ export default props => {
         </Description>
       </StyledCol>
       <Col xs={6}>
-        <Doughnut data={data} options={{ legend: {display: false}}} />
+        <Doughnut data={data} options={{ legend: { display: false } }} />
       </Col>
     </StyledRow>
   )

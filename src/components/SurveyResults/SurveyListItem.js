@@ -58,8 +58,8 @@ const Circle = styled.div`
   width: 140px;
   height: 140px;
   margin: 0 auto;
-  color: #337ab7;
-  background-color: #aaf0d8;
+  color: #fff;
+  background-color: #ff8c00;
   border-radius: 50%;
   display: flex;
   justify-content: center;
